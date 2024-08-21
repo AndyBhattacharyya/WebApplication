@@ -21,6 +21,7 @@ public class LoginProcessing extends HttpServlet {
             throws ServletException, IOException
     {
         PrintWriter out = response.getWriter();
+        response.setContentType("text/html");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         if(credentials.containsKey(username) && credentials.get(username).equals(password)){
