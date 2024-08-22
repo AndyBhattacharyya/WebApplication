@@ -15,7 +15,7 @@ public class SignupProcessing extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         LoginProcessing.credentials.put(username,password);
-        response.sendRedirect("/login.html");
+        response.sendRedirect("/login.jsp");
         /*
         response.setContentType("text/html");
         out.println(

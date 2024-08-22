@@ -1,3 +1,5 @@
+<%@ page import="java.util.HashMap" %>
+<%@ page import="java.io.IOException" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,19 +13,26 @@
     <input type="checkbox" id="chk" aria-hidden="true">
 
     <div class="signup">
-        <form method="POST" action="/SignupProcessing">
+        <form method="POST">
             <label for="chk" aria-hidden="true">Sign up</label>
             <input type="text" name="username" placeholder="User name" required="">
             <input type="password" name="password" placeholder="Password" required="">
             <button>Sign up</button>
+            <%
+
+            %>
         </form>
     </div>
-
     <div class="login">
-        <form method="POST" action="/LoginProcessing">
+        <form method="POST">
             <label for="chk" aria-hidden="true">Login</label>
             <input type="text" name="username" placeholder="User name" required="">
             <input type="password" name="password" placeholder="Password" required="">
+            <p>
+                <%
+                    doPost(request,response);
+                %>
+            </p>
             <button>Login</button>
         </form>
     </div>
