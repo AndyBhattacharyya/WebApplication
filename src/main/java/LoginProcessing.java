@@ -1,5 +1,4 @@
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -10,7 +9,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-@WebServlet(name="LoginProcessing", value = "/LoginProcessing")
 public class LoginProcessing extends HttpServlet {
     /*
     public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -27,7 +25,7 @@ public class LoginProcessing extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         if(credentials.containsKey(username) && credentials.get(username).equals(password)){
-            out.println("Correct Login!!!!");
+            out.println("Welcome!");
         }
         else{
             out.println("Incorrect Password");
